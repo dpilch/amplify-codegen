@@ -6,9 +6,9 @@ env:
 batch:
   fast-fail: false
   build-graph:
-    - identifier: install_linux
-      buildspec: .codebuild/install_linux.yml
+    - identifier: build_linux
+      buildspec: .codebuild/build_linux.yml
     - identifier: deprecate
       buildspec: .codebuild/deprecate.yml
       depend-on:
-        - install_linux
+        - build_linux
